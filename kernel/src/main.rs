@@ -1,18 +1,22 @@
-#![no_std]
+#![cfg_attr(not(test), no_std)]
 #![no_main]
 
+extern crate alloc;
 use crate::gfx::Display;
+use core::fmt::Write;
+#[cfg(not(test))]
+use core::panic::PanicInfo;
 use limine::{request::*, BaseRevision, RequestsEndMarker, RequestsStartMarker};
-use mimalloc::MiMalloc;
 
 mod gfx;
+mod crt;
 
 #[used]
 #[unsafe(link_section = ".requests_start")]
 pub static REQUESTS_START: RequestsStartMarker = RequestsStartMarker::new();
 
 #[unsafe(link_section = ".requests")]
-pub static BASE_REVISION: BaseRevision = BaseRevision::with_revision(4);
+pub static BASE_REVISION: BaseRevision = BaseRevision::with_revision(6);
 #[unsafe(link_section = ".requests")]
 pub static FRAMEBUFFER: FramebufferRequest = FramebufferRequest::new();
 #[unsafe(link_section = ".requests")]
@@ -63,15 +67,16 @@ pub static EFI_MEMMAP: EfiMemmapRequest = EfiMemmapRequest::new();
 #[unsafe(link_section = ".requests_end")]
 pub static REQUESTS_END: RequestsEndMarker = RequestsEndMarker::new();
 
-
-#[global_allocator]
-pub static GLOBAL: MiMalloc = MiMalloc;
+mod alloc_handler;
 
 #[unsafe(no_mangle)]
 /// # Safety
 /// I mean, it's the entry point. What could go wrong?
 pub unsafe extern "C" fn kmain() -> ! {
+
     assert!(BASE_REVISION.is_supported());
+
+    alloc_handler::GLOBAL.init();
 
     if let Some(framebuffer_response) = FRAMEBUFFER.response()
         && let Some(fb) = framebuffer_response.framebuffers().first()
@@ -80,11 +85,17 @@ pub unsafe extern "C" fn kmain() -> ! {
             inner: fb,
             text_info: Default::default(),
         };
+        disp.write_str("\nhihihi").unwrap();
     }
 
     hcf();
 }
 
+#[panic_handler]
+#[cfg(not(test))]
+fn rust_panic(_info: &PanicInfo) -> ! {
+    hcf()
+}
 
 fn hcf() -> ! {
     loop {

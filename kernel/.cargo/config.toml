@@ -1,0 +1,5 @@
+
+[target."runner/x86_64-none-none.json"]
+rustflags = ["-C", "relocation-model=static", "-C", "link-arg=kernel/kernel-x86_64.ld"]
+[target."runner/aarch64-none-none.json"]
+rustflags = ["-C", "relocation-model=static", "-C", "link-arg=kernel/kernel-aarch64.ld"]

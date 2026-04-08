@@ -1,0 +1,14 @@
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[workspace]
+resolver = "3"
+members = ["runner", "kernel"]
+default-members = ["runner"]

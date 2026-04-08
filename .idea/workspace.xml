@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml">
+      <package file="$PROJECT_DIR$/kernel">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/runner">
+        <feature name="default" enabled="true" />
+        <feature name="kernelx" enabled="true" />
+        <feature name="kernela" enabled="true" />
+        <feature name="x64" enabled="true" />
+      </package>
+    </cargoProject>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="74f60473-e2ee-4bd2-887c-e566956a948d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iso/boot/limine.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kernel/.cargo/config.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kernel/kernel-x86_64.ld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kernel/src/alloc_handler.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kernel/src/crt.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runner/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cargo/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.cargo/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/gfx.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/gfx.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/runner/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/runner/build.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rust-toolchain.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rust-toolchain.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="4" />
+    <option name="autoStart" value="false" />
+    <option name="idleThresholdMs" value="0" />
+    <option name="autoCountIdleSeconds" value="0" />
+    <option name="pauseOtherTrackerInstances" value="false" />
+    <option name="gitIntegration" value="true" />
+    <option name="naggedAbout" value="1" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CATboardBETA&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="v11.x" />
+                    <option name="lastUsedInstant" value="1775415286" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1775415285" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/Limine" />
+            </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1775526256" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1775526255" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CATboardBETA/rtos.git&quot;,
+    &quot;accountId&quot;: &quot;fccb1c29-e6aa-4c5d-a3a3-aa2d3b668a5b&quot;
+  }
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="xg1UGdI7" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3AYLeI43vgk2BW2U96mDhDxSWUe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Cargo.Run.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/will/rtos/kernel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;org.rust.hideNoCargoProjectNotifications/Users/will/rtos/kernel/Cargo.toml&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.cargo.check&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/kernel" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/iso/boot" />
+      <recent name="$PROJECT_DIR$/iso/EFI/BOOT" />
+      <recent name="$PROJECT_DIR$/kernel" />
+      <recent name="$PROJECT_DIR$/runner" />
+      <recent name="$PROJECT_DIR$/runner/src" />
+    </key>
+  </component>
+  <component name="RsExternalLinterProjectSettings">
+    <option name="tool" value="Clippy" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run --package rtos --bin rtos" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../.cargo/bin" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74f60473-e2ee-4bd2-887c-e566956a948d" name="Changes" comment="" />
+      <created>1772764650709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772764650709</updated>
+      <workItem from="1772764652220" duration="5027000" />
+      <workItem from="1772823923940" duration="1764000" />
+      <workItem from="1772829904394" duration="677000" />
+      <workItem from="1772939449415" duration="712000" />
+      <workItem from="1772940188461" duration="673000" />
+      <workItem from="1773329777962" duration="110000" />
+      <workItem from="1773423812274" duration="102000" />
+      <workItem from="1773424187735" duration="5000" />
+      <workItem from="1773705692597" duration="15000" />
+      <workItem from="1774999624482" duration="2068000" />
+      <workItem from="1775005736938" duration="8000" />
+      <workItem from="1775056419995" duration="2704000" />
+      <workItem from="1775086794386" duration="1752000" />
+      <workItem from="1775093274320" duration="3000" />
+      <workItem from="1775148348923" duration="1041000" />
+      <workItem from="1775253723826" duration="616000" />
+      <workItem from="1775410779983" duration="6197000" />
+      <workItem from="1775429677500" duration="10768000" />
+      <workItem from="1775443221083" duration="6512000" />
+      <workItem from="1775494507661" duration="4459000" />
+      <workItem from="1775508045687" duration="909000" />
+      <workItem from="1775518950583" duration="2401000" />
+      <workItem from="1775526642452" duration="55000" />
+      <workItem from="1775526709068" duration="239000" />
+      <workItem from="1775585395004" duration="1609000" />
+      <workItem from="1775599489835" duration="3150000" />
+      <workItem from="1775602771000" duration="1171000" />
+      <workItem from="1775610834552" duration="1551000" />
+      <workItem from="1775612466088" duration="3055000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

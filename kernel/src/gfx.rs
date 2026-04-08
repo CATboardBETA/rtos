@@ -47,7 +47,7 @@ impl DrawTarget for Display {
         for Pixel(coord, color) in pixels.into_iter() {
             let width = self.inner.width as i32;
             let height = self.inner.height as i32;
-            if let Ok((x, y)) = coord.try_into()
+            if let (x, y) = coord.into()
                 && 0 <= x
                 && x < width
                 && 0 <= y

@@ -1,6 +1,6 @@
 [toolchain]
 channel = "nightly"
 targets = [
-    "x86_64-unknown-none",
-    "aarch64-unknown-none",
+    "runner/x86_64-none-none.json",
+    "runner/aarch64-none-none.json",
 ]
