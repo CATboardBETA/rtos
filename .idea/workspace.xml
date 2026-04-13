@@ -15,42 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="880acd77-ee29-4ac0-bf95-eb5bc40b8e77" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kernel/.config/cargo.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/gfx/internal.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/gfx/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/gfx/print.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/interrupt/aarch64_exception.s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_x64/acpi.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_x64/apic.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_x64/irq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kernel/src/panic.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cargo/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.cargo/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rtos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rtos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iso/EFI/BOOT/BOOTAA64.EFI" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iso/EFI/BOOT/BOOTX64.EFI" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iso/boot/limine-bios-cd.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iso/boot/limine-bios.sys" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iso/boot/limine-uefi-cd.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/.cargo/config.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/kernel-aarch64.ld" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/kernel-aarch64.ld" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kernel/src/alloc_handler.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/alloc_handler.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/src/crt.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/crt.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/src/gfx.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/src/interrupt.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/interrupt.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_aarch64.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_aarch64.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_x64.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/interrupt/interrupt_x64.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/runner/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/runner/build.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/kernel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/runner/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rust-toolchain.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rust-toolchain.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="44354" />
+    <option name="totalTimeSeconds" value="44539" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
   <component name="Git.Settings">
@@ -131,7 +97,7 @@
   </component>
   <component name="RustProjectSettings">
     <option name="rustcTarget" value="x86_64-unknown-none" />
-    <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../.cargo/bin" />
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -147,6 +113,7 @@
       <workItem from="1775949946175" duration="23006000" />
       <workItem from="1776040169408" duration="863000" />
       <workItem from="1776082742797" duration="10162000" />
+      <workItem from="1776103852124" duration="2052000" />
     </task>
     <servers />
   </component>

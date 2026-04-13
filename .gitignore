@@ -1,4 +1,7 @@
 /target
 iso/kernel
+runner/kernel
 image.iso
-/runner/target
+/runner/target/
+.idea
+**/*/.DS_STORE
