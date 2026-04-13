@@ -1,15 +1,16 @@
-#![feature(abi_x86_interrupt)]
+#![cfg(not(test))]
 #![cfg_attr(not(test), no_std)]
-#![no_main]
+#![cfg_attr(target_arch = "x86_64", feature(abi_x86_interrupt))]
+#![cfg_attr(not(test), no_main)]
+#![warn(clippy::pedantic)]
+#![warn(clippy::nursery)]
+#![allow(clippy::cast_possible_truncation)]
+#![allow(clippy::cast_sign_loss)]
 
 extern crate alloc;
 
-use crate::gfx::{Display, TextInfo};
-use crate::reqs::{BASE_REVISION, FRAMEBUFFER};
-use alloc::vec;
-#[cfg(not(test))]
-use core::panic::PanicInfo;
-use gfx::DISPLAY;
+use crate::gfx::{Color, Gfx};
+use crate::reqs::FRAMEBUFFER;
 
 mod crt;
 mod gfx;
@@ -22,27 +23,31 @@ mod interrupt;
 /// I mean, it's the entry point. What could go wrong?
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn kmain() -> ! {
-    DISPLAY.0.lock().call_once(|| Display {
-        inner: FRAMEBUFFER
+    alloc_handler::init_global();
+    #[cfg(target_arch = "aarch64")]
+    unsafe {
+        interrupt::handling_init();
+    }
+    #[cfg(target_arch = "x86_64")]
+    interrupt::init_interrupt_table();
+
+    let gfx = Gfx::from(
+        *FRAMEBUFFER
             .response()
             .unwrap()
             .framebuffers()
             .first()
             .unwrap(),
-        text_info: TextInfo { pos: (0, 20) },
-    });
-    interrupt::init_interrupt_table();
-    alloc_handler::init_global();
+    );
+
+    gfx.fill_rect((40, 20), (700, 300), Color::BLUE).unwrap();
+    gfx.draw_line((10,30), (550, 700), Color::RED).unwrap();
+
 
     hcf();
 }
 
-#[panic_handler]
-#[cfg(not(test))]
-fn rust_panic(info: &PanicInfo) -> ! {
-    println!("{info}");
-    hcf()
-}
+mod panic;
 
 fn hcf() -> ! {
     loop {
@@ -53,4 +58,9 @@ fn hcf() -> ! {
             core::arch::asm!("wfi");
         }
     }
+}
+
+#[cfg(test)]
+fn main() {
+    panic!("no no no no");
 }

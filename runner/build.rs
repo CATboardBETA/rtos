@@ -7,6 +7,9 @@ fn main() {
 
     let _ = fs::remove_file(env!("CARGO_MANIFEST_DIR").to_string() + "../iso/kernel");
 
+    let _ = fs::remove_file(env!("CARGO_MANIFEST_DIR").to_string() + "./kernel");
+    let _ = fs::remove_dir_all(env!("CARGO_MANIFEST_DIR").to_string() + "./target");
+
     let iso_dir = PathBuf::from("../iso");
 
     let status = Command::new("cargo")
@@ -15,7 +18,9 @@ fn main() {
             "-Z",
             "unstable-options",
             "--manifest-path",
-            &(env!("CARGO_MANIFEST_DIR").to_string() + "/../kernel/Cargo.toml"),
+            &(env!("CARGO_MANIFEST_DIR").to_string() + "/../Cargo.toml"),
+            "-p",
+            "kernel",
             "--target",
             #[cfg(feature = "aarch")]
             "./aarch64-none-none.json",
@@ -35,6 +40,7 @@ fn main() {
     if status.is_none() || status.unwrap() != 0 {
         panic!("cannot continue with failed kernel build");
     }
+    fs::rename("./main", "./kernel").unwrap();
 
     let kernel_executable_file = PathBuf::from("./kernel").canonicalize().unwrap();
 
@@ -44,7 +50,7 @@ fn main() {
         exit(0)
     });
     Command::new("xorriso")
-        .args(dbg!([
+        .args([
             "-as",
             "mkisofs",
             "-R",
@@ -68,7 +74,7 @@ fn main() {
             iso_dir.canonicalize().unwrap().to_str().unwrap(),
             "-o",
             "../image.iso",
-        ]))
+        ])
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
         .status()
@@ -81,7 +87,7 @@ fn main() {
     );
 
     Command::new("limine")
-        .args(["../image.iso"])
+        .args(["bios-install", "../image.iso"])
         .status()
         .unwrap();
 

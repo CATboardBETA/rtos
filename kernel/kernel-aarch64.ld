@@ -1,5 +1,5 @@
-OUTPUT_FORMAT(elf64-littleriscv)
-OUTPUT_ARCH(riscv)
+OUTPUT_FORMAT(elf64-littleaarch64)
+OUTPUT_ARCH(aarch64)
 
 ENTRY(kmain)
 

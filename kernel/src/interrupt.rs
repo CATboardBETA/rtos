@@ -6,6 +6,6 @@ mod interrupt_x64;
 pub use interrupt_x64::*;
 
 #[cfg(target_arch = "aarch64")]
-mod interrupt_aarch64;
+pub mod interrupt_aarch64;
 #[cfg(target_arch = "aarch64")]
 pub use interrupt_aarch64::*;

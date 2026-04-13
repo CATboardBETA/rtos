@@ -1,3 +1,9 @@
 [unstable]
 bindeps = true
 json-target-spec = true
+
+[target."./runner/x86_64-none-none.json".build]
+rustflags = ["-C", "relocation-model=static", "-C", "link-arg=kernel/kernel-x86_64.ld", "-Zbuild-std", "core,alloc,compiler_builtins"]
+
+[target."./runner/aarch64-none-none.json".build]
+rustflags = ["-C", "relocation-model=static", "-C", "link-arg=kernel/kernel-aarch64.ld,", "-Zbuild-std", "core,alloc,compiler_builtins"]

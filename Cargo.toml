@@ -7,6 +7,10 @@ panic = "abort"
 
 [profile.release]
 panic = "abort"
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+
 
 [workspace]
 resolver = "3"

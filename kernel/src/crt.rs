@@ -1,4 +1,5 @@
 // Copyright © 2026, __robot@PLT
+
 // SPDX-License-Identifier: MIT
 
 #![allow(unsafe_op_in_unsafe_fn)]
@@ -32,7 +33,7 @@ pub unsafe extern "C" fn memcmp(a: *const i8, b: *const i8, size: usize) -> c_in
         let a = a.add(i).read_volatile();
         let b = b.add(i).read_volatile();
         if a != b {
-            return a as c_int - b as c_int;
+            return c_int::from(a) - c_int::from(b);
         }
     }
     0
@@ -47,13 +48,13 @@ pub unsafe extern "C" fn memcpy(dest: *mut u8, src: *const u8, size: usize) -> *
 #[inline(never)]
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn memmove(dest: *mut u8, src: *const u8, size: usize) -> *mut u8 {
-    if (dest as *const u8) < src {
+    if dest.cast_const() < src {
         for i in 0..size {
-            (dest.add(i)).write_volatile(src.add(i).read_volatile());
+            dest.add(i).write_volatile(src.add(i).read_volatile());
         }
     } else {
         for i in (0..size).rev() {
-            (dest.add(i)).write_volatile(src.add(i).read_volatile());
+            dest.add(i).write_volatile(src.add(i).read_volatile());
         }
     }
 

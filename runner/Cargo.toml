@@ -3,5 +3,13 @@ name = "runner"
 version.workspace = true
 edition.workspace = true
 build = "build.rs"
+
+[[bin]]
+name = "runner"
+path = "src/main.rs"
+test = false
+bench = false
+doctest = false
+
 [features]
 aarch = []

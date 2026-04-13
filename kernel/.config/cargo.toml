@@ -1,0 +1,3 @@
+
+[build]
+target = ["./runner/x86_64-none-none.json", "./runner/aarch64-none-none.json"]

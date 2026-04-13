@@ -1,6 +1,3 @@
 [toolchain]
 channel = "nightly"
-targets = [
-    "runner/x86_64-none-none.json",
-    "runner/aarch64-none-none.json",
-]
+targets = ["./runner/aarch64-none-none.json","./runner/x86_64-none-none.json"]
