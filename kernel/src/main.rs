@@ -13,7 +13,6 @@ extern crate alloc;
 use crate::gfx::{Color, Gfx};
 use crate::reqs::FRAMEBUFFER;
 
-mod crt;
 mod gfx;
 mod reqs;
 
