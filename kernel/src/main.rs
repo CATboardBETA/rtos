@@ -18,9 +18,13 @@
 #![warn(clippy::missing_docs_in_private_items)]
 // TODO: remove unused allow
 #![allow(unused)]
+#![warn(unused_results)]
+#![warn(unused_must_use)]
 
 extern crate alloc;
 
+use alloc::vec;
+use core::hint::black_box;
 use crate::gfx::{Color, Gfx};
 use crate::reqs::FRAMEBUFFER;
 
@@ -59,9 +63,8 @@ pub unsafe extern "C" fn kmain() -> ! {
             .first()
             .unwrap(),
     );
-
-    gfx.fill_rect((40, 20), (700, 300), Color::BLUE);
-    gfx.draw_line((10, 30), (550, 700), Color::RED);
+    gfx.fill_rect((40, 20), (700, 300), Color::BLUE).unwrap();
+    gfx.draw_line((10, 30), (550, 700), Color::RED).unwrap();
 
     hcf();
 }
