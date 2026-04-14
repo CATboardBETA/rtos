@@ -37,14 +37,14 @@ mod reqs;
 /// One safety issue specific to [`kmain`] is the `limine` [`BaseRevision`](limine::BaseRevision).
 /// If the `BaseRevision` is too low (what is considered too low depends on what features of
 /// [the protocol](https://github.com/Limine-Bootloader/limine-protocol/blob/trunk/PROTOCOL.md) are used)
-/// 
+///
 /// # Panics
-/// 
+///
 /// This can technically panic. This can happen in one of a few cases:
 /// - Any of the many limine requests fail (an irrecoverable error)
-/// - There are no framebuffers 
+/// - There are no framebuffers
 ///   - TODO: can try VGA on `x86_64`
-/// - The graphics functions return [a `DrawError`](gfx::DrawError) 
+/// - The graphics functions return [a `DrawError`](gfx::DrawError)
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn kmain() -> ! {
     alloc_handler::init_global();
@@ -67,7 +67,7 @@ pub unsafe extern "C" fn kmain() -> ! {
 }
 
 
-/// Runs the appropriate assembler on loop, to halt 
+/// Runs the appropriate assembler on loop, to halt
 fn hcf() -> ! {
     loop {
         unsafe {
